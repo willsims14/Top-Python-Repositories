@@ -1,6 +1,6 @@
 # Top Python Repositories
-### Will Sims
-#### 12/19/2019
+#### Will Sims
+###### 12/19/2019
 
 
 ## Clone Repo
@@ -37,14 +37,10 @@ python manage.py migrate
 python manage.py populate
 ```
 
-3) Run the app on a local server:
+3) Start your server and browse away!
 
 ```
 python manage.py runserver
-``` 
+```
 
-
-# Requirements
-* Django == 3.0.1
-* inflection == 0.3.1
-* requests == 2.22.0
+Using your favorite internet browser navigate to http://localhost:8000/
