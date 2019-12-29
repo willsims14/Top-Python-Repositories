@@ -24,13 +24,24 @@ pip install -r requirements.txt
 
 
 ## Usage
-1) Once the repository is cloned and the required packages are installed, migrate the provided migrations to initialize a `.sqlite3` database:
+1) Once the repository is cloned and the required packages are installed, migrate the provided migrations to initialize a the database:
 
 ```
 python manage.py migrate
 ```
+> Notice the `db.sqlite3` file that was created to act as our database
 
-2) Now
+2) Now that the database is initialized and ready to house data, we can populate it with data (most-starred public Python repositories):
+
+```
+python manage.py populate
+```
+
+3) Run the app on a local server:
+
+```
+python manage.py runserver
+``` 
 
 
 # Requirements
