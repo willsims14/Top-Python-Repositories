@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Popular Python Repositories</h1>
+
+    {% if trending_repos %}
+        <ol>
+        {% for repo in trending_repos %}
+            <li class='row'>
+                <a href="{% url 'github_repos:detail' repo.id %}">{{ repo.name }}</a>
+                <small>({{ repo.star_count }} Stars) </small>
+            </li>
+        {% endfor %}
+        </ol>
+    {% else %}
+        <p>No repositories are available.</p>
+    {% endif %}
+  {% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2><a href='{{ repository.url }}'>{{ repository.name }}</a></h2>
+    <blockquote>{{ repository.description }}</blockquote>
+    <ul>
+        <li class='row'>
+            <div class='col s4'>
+                <span class='flow-text'>Star Count:</span> 
+            </div>
+            <div class='col s8'>{{ repository.star_count }}</div>
+        </li>
+
+        <li class='row'>
+            <div class='col s4'>
+                <span class='flow-text'>Repository URL:</span>
+            </div>
+            <div class='col s8'><i>{{ repository.url }}</i></div>
+        </li>
+
+        <li class='row'>
+            <div class='col s4'>
+                <span class='flow-text'>Created On:</span>
+            </div>
+            <div class='col s8'>{{ repository.created_on }}</div>
+        </li>
+
+        <li class='row'>
+            <div class='col s4'>
+                <span class='flow-text'>Date & Time of Last Push:</span>
+            </div>
+            <div class='col s8'>{{ repository.last_push_on }}</div>
+        </li>
+
+        <li class='row'>
+            <div class='col s4'>
+                <span class='flow-text'>Last Updated:</span>
+            </div>
+            <div class='col s8'>{{ repository.data_retrieved_on }}</div>
+        </li>
+
+    </ul>
+    <!-- <ul>
+    {% for _ in repo._.all %}
+        <li>{{ _.value }}</li>
+    {% endfor %}
+    </ul> -->
+
+  {% endblock %}
