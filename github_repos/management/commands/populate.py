@@ -1,9 +1,8 @@
-from django.core.management.base import BaseCommand, CommandError
-from github_repos.models import Repository
+from django.core.management.base import BaseCommand
 from django.utils import timezone
-
 import requests
-import inflection
+
+from github_repos.models import Repository
 
 
 class Command(BaseCommand):
