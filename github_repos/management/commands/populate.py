@@ -19,7 +19,7 @@ class Command(BaseCommand):
         data = r.json()['items']
         for i, repo_object in enumerate(data):
             repo, created = Repository.objects.get_or_create(
-                url=repo_object['url'],
+                url=repo_object['html_url'],
                 defaults={
                     'name': repo_object['name'],
                     'created_on':repo_object['created_at'],
