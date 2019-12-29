@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
-
 {% block content %}
-
     <h2><a href='{{ repository.url }}'>{{ repository.name }}</a></h2>
     <blockquote>{{ repository.description }}</blockquote>
     <ul>
@@ -39,8 +37,5 @@
             </div>
             <div class='col s8'>{{ repository.data_retrieved_on }}</div>
         </li>
-
     </ul>
-
-
   {% endblock %}
