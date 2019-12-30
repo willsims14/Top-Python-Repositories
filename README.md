@@ -36,6 +36,8 @@ python manage.py migrate
 ```
 python manage.py populate
 ```
+> The ```populate``` management command will insert new repositories into the database if its the first time being executed, or it will update existing entries if it has been called before.
+
 
 3) Start your server and browse away!
 
@@ -43,4 +45,4 @@ python manage.py populate
 python manage.py runserver
 ```
 
-Using your favorite internet browser navigate to http://localhost:8000/
+Using your favorite internet browser navigate to [http://localhost:8000/](http://localhost:8000/)
