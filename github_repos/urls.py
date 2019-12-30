@@ -6,6 +6,8 @@ from . import views
 
 app_name = 'github_repos'
 urlpatterns = [
-    path('', views.IndexView.as_view(), name='index'),
-    path('repos/<int:repo_id>/', views.DetailView.repo_detail, name='detail'),
+    # path('', views.IndexView.as_view(), name='index'),
+    path('', views.redirect, name='index'),
+    path('repos/', views.index, name='index'),
+    path('repos/<int:repo_id>/', views.detail, name='detail'),
 ]

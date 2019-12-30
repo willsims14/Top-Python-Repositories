@@ -30,7 +30,7 @@ class Command(BaseCommand):
             )
             repo.save()
             db_operation = '[INSERT]' if created else '[UPDATE]'
-            print('{} {} had {:>4} stargazers.'.format(db_operation, 
+            print('{} {} has {:>4} stargazers.'.format(db_operation, 
                                                        repo.name, 
                                                        repo.star_count))
 
