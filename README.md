@@ -36,7 +36,7 @@ python manage.py migrate
 ```
 python manage.py populate
 ```
-> The ```populate``` management command will insert new repositories into the database if its the first time being executed, or it will update existing entries if it has been called before.
+> The ```populate``` management command will insert new repositories into the database if its the first time being executed, or it will update existing entries (queried using each repository's unique URL) if it has been called before.
 
 
 3) Start your server and browse away!
