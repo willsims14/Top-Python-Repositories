@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% if repository %}
     <h2><a href='{{ repository.url }}'>{{ repository.name }}</a></h2>
     <blockquote>{{ repository.description }}</blockquote>
     <ul>
@@ -38,4 +39,9 @@
             <div class='col s8'>{{ repository.data_retrieved_on }}</div>
         </li>
     </ul>
+    {% else %}
+        <div class='container center'>
+            <h4>Repository does not exist!</h4>
+        </div>
+    {% endif %}
   {% endblock %}
