@@ -111,5 +111,5 @@ class RepositoryIndexViewTests(TestCase):
         response = self.client.get(reverse('github_repos:index'))
         self.assertQuerysetEqual(
             response.context['trending_repos'],
-            ['<Repository: Repository object (2)>', '<Repository: Repository object (1)>']
+            ['<Repository: Repository object (1)>', '<Repository: Repository object (2)>']
         )
