@@ -46,3 +46,5 @@ python manage.py runserver
 ```
 
 Using your favorite internet browser navigate to [http://localhost:8000/](http://localhost:8000/)
+
+**NOTE**: I included some unit tests here, but they're not completely comprehensive.
