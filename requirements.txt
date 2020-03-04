@@ -1,4 +1,4 @@
 # Requirements
-Django == 3.0.1
+Django == 3.0.3
 inflection == 0.3.1
 requests == 2.22.0
