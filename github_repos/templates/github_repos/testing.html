@@ -1,25 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1 class='light-blue-text text-darken-1'>{{ header }}</h1>
+    <h1 class='light-blue-text text-darken-1'>Popular Python Repositories</h1>
+
     <div class="left-align">
-        {% if repositories %}
+        {% if trending_repos %}
             <ol class="">
-            {% for repo in repositories %}
+            {% for repo in trending_repos %}
                 <li class='row'>
                     <a class="light-blue-text text-darken-4" href="{% url 'github_repos:detail' repo.id %}">{{ repo.name }}</a>
                     <small class='light-blue-text text-darken-4'>({{ repo.star_count }} Stars) </small>
                 </li>
             {% endfor %}
             </ol>
+            <a class="waves-effect waves-light btn blue darken-5" href="{% url 'github_repos:repo_list' %}">View More</a>
+
+
+
+
         {% else %}
             <p>No repositories are available.</p>
         {% endif %}
 
-
-
-
-
-
     </div>
+
+
+
   {% endblock %}
 

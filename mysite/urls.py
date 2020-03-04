@@ -18,4 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     path('', include('github_repos.urls')),
+    path('admin/', admin.site.urls),
 ]
